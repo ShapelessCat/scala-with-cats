@@ -66,6 +66,11 @@ jobs:
           sudo apt-get update -y
           sudo apt-get install -y ttf-bitstream-vera
 
+      - name: Install Scala and SBT
+        uses: olafurpg/setup-scala@v11
+        with:
+          java-version: adopt@1.11
+
       - name: Generate book
         run: sbt all
 
