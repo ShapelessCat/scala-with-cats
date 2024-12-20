@@ -11,6 +11,7 @@ The members of ScalaBridge London and attendees at various training courses acte
 Thanks for the members of the PLT research group who inspired me directly back in the day, and continue to provide inspiration from afar.
 Finally, thanks to the following who sponsored my work or contributed with corrections and suggestions:
 
+Aleksandr Andreev,
 Charles Adetiloye,
 Johanna Odersky,
 Lunfu Zhong,

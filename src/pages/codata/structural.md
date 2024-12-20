@@ -318,7 +318,7 @@ trait Stream[A] {
       
       def tail: Stream[A] = {
         def loop(stream: Stream[A]): Stream[A] =
-          if pred(stream.head) then stream.tail
+          if pred(stream.head) then stream.tail.filter(pred)
           else loop(stream.tail)
           
         loop(self)
@@ -369,7 +369,7 @@ trait Stream[A] {
       
       def tail: Stream[A] = {
         def loop(stream: Stream[A]): Stream[A] =
-          if pred(stream.head) then stream.tail
+          if pred(stream.head) then stream.tail.filter(pred)
           else loop(stream.tail)
           
         loop(self)
@@ -456,7 +456,7 @@ trait Stream[A] {
       
       def tail: Stream[A] = {
         def loop(stream: Stream[A]): Stream[A] =
-          if pred(stream.head) then stream.tail
+          if pred(stream.head) then stream.tail.filter(pred)
           else loop(stream.tail)
           
         loop(self)
@@ -546,7 +546,7 @@ def filter(pred: A => Boolean): Stream[A] = {
     
     def tail: Stream[A] = {
       def loop(stream: Stream[A]): Stream[A] =
-        if pred(stream.head) then stream.tail
+        if pred(stream.head) then stream.tail.filter(pred)
         else loop(stream.tail)
         
       loop(self)
