@@ -125,7 +125,7 @@ Now we can move on to the problem specific parts.
 Here we have three strategies to help us:
 
 1. reasoning independently by case; 
-2. assuming recursion the is correct; and
+2. assuming the recursion is correct; and
 3. following the types
 
 The first two are specific to structural recursion, while the final one is a general strategy we can use in many situations.
