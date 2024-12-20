@@ -21,7 +21,7 @@ Olya Mazhara,
 Pavel Syvak,
 Philip Schwarz,
 Seth Tisue,
-Tim Eccleston ([@combinatorist](https://github.com/combinatorist)).
+Tim Eccleston ([\@combinatorist](https://github.com/combinatorist)).
 
 
 ## Acknowledgements from Scala with Cats
