@@ -20,7 +20,8 @@ Murat Cetin ,
 Olya Mazhara,
 Pavel Syvak,
 Philip Schwarz,
-Seth Tisue
+Seth Tisue,
+Tim Eccleston ([@combinatorist](https://github.com/combinatorist)).
 
 
 ## Acknowledgements from Scala with Cats
