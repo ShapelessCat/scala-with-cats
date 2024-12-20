@@ -100,13 +100,15 @@ Much easier to read!
 
 You'll only see this in Scala 2. Scala 3 has the concept of **transparent traits**, which aren't reported in inferred types, so you'll see the same output in Scala 3 no matter whether you add `Product` and `Serializable` or not.
 
-Finally, if a logical and holds no data we can use a `case object` instead of a `case class`. For example, if we're defining some type `A` that holds no data we can just write
+Finally, we can use a `case object` instead of a `case class` when we're defining some type that holds no data. For example, reading from a text stream, such as a terminal, can return a character or the end-of-file. We can model this as
 
 ```scala mdoc:silent
-case object A
+sealed abstract class Result
+final case class Character(value: Char) extends Result
+case object Eof extends Result
 ```
 
-There is no need to mark the `case object` as `final`, as objects cannot be extended.
+As the end-of-file indicator `Eof` has no associated data we use a `case object`. There is no need to mark the `case object` as `final`, as objects cannot be extended.
 
 
 ### Examples
