@@ -339,10 +339,10 @@ trait Stream[A] {
   def scanLeft[B](zero: B)(f: (B, A) => B): Stream[B] = {
     val self = this
     new Stream[B] {
-      def head: B = f(zero, self.head)
+      def head: B = zero
       
       def tail: Stream[B] =
-        self.tail.scanLeft(this.head)(f)
+        self.tail.scanLeft(f(zero, self.head))(f)
     }
   }
 }
@@ -380,10 +380,10 @@ trait Stream[A] {
   def scanLeft[B](zero: B)(f: (B, A) => B): Stream[B] = {
     val self = this
     new Stream[B] {
-      def head: B = f(zero, self.head)
+      def head: B = zero
       
       def tail: Stream[B] =
-        self.tail.scanLeft(this.head)(f)
+        self.tail.scanLeft(f(zero, self.head))(f)
     }
   }
 
@@ -475,10 +475,10 @@ trait Stream[A] {
   def scanLeft[B](zero: B)(f: (B, A) => B): Stream[B] = {
     val self = this
     new Stream[B] {
-      def head: B = f(zero, self.head)
+      def head: B = zero
       
       def tail: Stream[B] =
-        self.tail.scanLeft(this.head)(f)
+        self.tail.scanLeft(f(zero, self.head))(f)
     }
   }
 
@@ -555,7 +555,7 @@ def filter(pred: A => Boolean): Stream[A] = {
 }
 ```
 
-We know that delaying the computation until the method is called is important, because that is how we can handle infinite and self-referential data. However we don't need to redo this computation on succesive calls. We can instead cache the result from the first call and use that next time.
+We know that delaying the computation until the method is called is important, because that is how we can handle infinite and self-referential data. However we don't need to redo this computation on successive calls. We can instead cache the result from the first call and use that next time.
 Scala makes this easy with `lazy val`, which is a `val` that is not computed until its first call.
 Additionally, Scala's use of the *uniform access principle* means we can implement a method with no parameters using a `lazy val`.
 Here's a quick example demonstrating it in use.
