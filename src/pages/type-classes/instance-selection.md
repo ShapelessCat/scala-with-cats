@@ -176,7 +176,7 @@ This is the default semantics for Scala type constructors.
 
 ### Variance and Instance Selection
 
-When the compiler searches for a given instnace
+When the compiler searches for a given instance
 it looks for one matching the type *or subtype*.
 Thus we can use variance annotations
 to control type class instance selection to some extent.
