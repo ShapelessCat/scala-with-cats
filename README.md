@@ -48,7 +48,7 @@ These are useful for debugging the build.
 
 If you spot a typo or mistake,
 please feel free to fork the repo and submit a Pull Request.
-Add yourself to [contributors.md](src/pages/preface/contributors.md)
+Add yourself to [acknowledgements.md](src/pages/appendices/acknowledgements.md)
 to ensure we credit you for your contribution.
 
 If you don't have time to submit a PR
